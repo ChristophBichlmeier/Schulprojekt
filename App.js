@@ -4,12 +4,11 @@ import { Button, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <View style= {styles.screens}>
-
+      <View style= {styles.links}>
+        <Text style={styles.text}>Home</Text>
       </View>
-      <View style={styles.buttonContainer}>
-        <Button title='Home' color="tomato" style={styles.buttons}/>
-        <Button title='News' color="tomato" style={styles.buttons}/>
+      <View style={styles.links}>
+        <Text style={styles.text}>News</Text>
       </View>
     </SafeAreaView>
   );
@@ -17,22 +16,22 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    //flex: 1,
+    height: "20%",
+    backgroundColor: "tomato",
     flexDirection: 'column',
+    justifyContent: "space-evenly",
+    
   },
-  buttonContainer: {
-    flex: 1,
-    backgroundColor: "fff",
-    justifyContent: 'space-evenly',
-    flexDirection: "row",
-    alignItems: 'center'
-  },
-  buttons: {
-    flex: 1,
-  },
-  screens: {
-    flex: 10,
+  links: {
+    //flex: 1,
+    height: "20%",
     backgroundColor: "dodgerblue",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignContent: "center"
+  },
+  text: {
+    paddingLeft: "10%"
   }
 });
