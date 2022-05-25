@@ -16,8 +16,8 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    //flex: 1,
-    height: "20%",
+    flex: 1,
+    //height: "20%",
     backgroundColor: "tomato",
     flexDirection: 'column',
     justifyContent: "space-evenly",
