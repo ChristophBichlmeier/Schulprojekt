@@ -1,7 +1,21 @@
+import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Button, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import MainContainer from './navigation/MainContainer';
 
-export default function App() {
+function App() {
+  return(
+    <MainContainer/>
+  )
+}
+
+export default App;
+
+
+
+
+
+/*export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View style= {styles.links}>
@@ -34,4 +48,4 @@ const styles = StyleSheet.create({
   text: {
     paddingLeft: "10%"
   }
-});
+});*/
