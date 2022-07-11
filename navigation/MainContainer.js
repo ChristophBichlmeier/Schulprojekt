@@ -7,10 +7,12 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import HomeScreen from "./screens/HomeScreen";
 import InfoScreen from "./screens/InfoScreen";
 import VertretungsplanScreen from "./screens/VertretungsplanScreen";
+import StundenplanScreen from "./screens/StundenplanScreen";
 
 const homeName = "Home";
 const infoName = "Info";
 const vertretungsplanName = "Vertretungsplan";
+const stundenplanName = "Stundenplan";
 
 const Tab = createBottomTabNavigator();
 
@@ -28,6 +30,8 @@ export default function MainContainer() {
               iconName = focused ? "home" : "home-outline";
             } else if (rn === infoName) {
               iconName = focused ? "list" : "list-outline";
+            } else if (rn === stundenplanName) {
+              iconName = focused ? "list" : "list-outline";
             } else if (rn === vertretungsplanName) {
               iconName = focused ? "list" : "list-outline";
             }
@@ -38,6 +42,7 @@ export default function MainContainer() {
       >
         <Tab.Screen name={homeName} component={HomeScreen} />
         <Tab.Screen name={infoName} component={InfoScreen} />
+        <Tab.Screen name={stundenplanName} component={StundenplanScreen} />
         <Tab.Screen
           name={vertretungsplanName}
           component={VertretungsplanScreen}
