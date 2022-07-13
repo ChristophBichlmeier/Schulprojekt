@@ -8,11 +8,13 @@ import HomeScreen from "./screens/HomeScreen";
 import InfoScreen from "./screens/InfoScreen";
 import VertretungsplanScreen from "./screens/VertretungsplanScreen";
 import StundenplanScreen from "./screens/StundenplanScreen";
+import KalendarScreen from "./screens/KalendarScreen";
 
 const homeName = "Home";
 const infoName = "Info";
 const vertretungsplanName = "Vertretungsplan";
 const stundenplanName = "Stundenplan";
+const kalendarName = "Kalendar";
 
 const Tab = createBottomTabNavigator();
 
@@ -34,8 +36,9 @@ export default function MainContainer() {
               iconName = focused ? "list" : "list-outline";
             } else if (rn === vertretungsplanName) {
               iconName = focused ? "list" : "list-outline";
+            } else if (rn === kalendarName) {
+              iconName = focused ? "list" : "list-outline";
             }
-
             return <Ionicons name={iconName} size={size} color={color} />;
           },
         })}
@@ -47,6 +50,7 @@ export default function MainContainer() {
           name={vertretungsplanName}
           component={VertretungsplanScreen}
         />
+        <Tab.Screen name={kalendarName} component={KalendarScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
